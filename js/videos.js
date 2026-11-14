@@ -72,7 +72,7 @@ async function traerLista(lista) {
 }
 
 function reproducir(video, desplazar) {
-  reproductor.src = `https://www.youtube-nocookie.com/embed/${video.id}?rel=0`;
+  reproductor.src = `https://www.youtube.com/embed/${video.id}?rel=0`;
   reproductor.title = video.titulo;
   tituloActual.textContent = video.titulo;
   cuadricula.querySelectorAll("[aria-current]").forEach((b) => b.removeAttribute("aria-current"));

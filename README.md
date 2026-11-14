@@ -37,3 +37,13 @@ Busca estos textos para encontrar lo que falta llenar:
 - `action="#"`: formulario de Mailchimp (inicio)
 - `href="#"`: links de Spotify y Apple Music (pie de página)
 - `instagram-relleno`: se cambia por el widget de Behold al final
+
+## Lista de pendientes
+
+- [ ] Versión en inglés del sitio (al menos Bio y Contacto; decidir si todo el sitio va en inglés y español)
+- [ ] Fotos de la banda en Bio (van en `/img/prensa/`)
+- [ ] Portadas en alta de Arriba La L, Ay Ay Ay y Chip S
+- [ ] Favicon (logo cuadrado)
+- [ ] Formulario de Mailchimp (inicio)
+- [ ] Feed de Instagram con Behold (inicio)
+- [ ] Netlify y conectar el dominio ladrones.mx
