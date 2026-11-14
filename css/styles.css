@@ -112,7 +112,7 @@ h2 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 64px;
+  min-height: 76px;
 }
 
 .logo {
@@ -125,7 +125,7 @@ h2 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
 
 .logo img {
   display: block;
-  height: 40px;
+  height: 52px;
   width: auto;
 }
 
@@ -155,7 +155,7 @@ h2 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 64px;
+  top: 76px;
   left: 0;
   right: 0;
   padding: var(--espacio);
@@ -195,7 +195,7 @@ main {
 
 /* Que los títulos no queden debajo del encabezado fijo */
 [id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 92px;
 }
 
 .seccion {
@@ -317,8 +317,30 @@ main {
   padding: 0;
 }
 
+.redes {
+  gap: 0.5rem 1rem;
+}
+
 .redes a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
   text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.redes a:hover,
+.redes a:focus-visible {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.redes img {
+  width: 28px;
+  height: 28px;
 }
 
 /* ---------- Discografía (página Música) ---------- */
