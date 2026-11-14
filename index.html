@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO: copia el título y la descripción de la hoja de inventario (pestaña Páginas y SEO) -->
+  <title>Ladrones | Sitio oficial</title>
+  <meta name="description" content="Sitio oficial de Ladrones: música, fechas de tour, videos y merch.">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta property="og:title" content="Ladrones | Sitio oficial">
+  <meta property="og:description" content="Sitio oficial de Ladrones: música, fechas de tour, videos y merch.">
+  <meta property="og:image" content="/img/compartir.jpg">
+  <meta property="og:url" content="https://www.ladrones.mx/">
+  <link rel="icon" href="/img/favicon.png">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="/">Ladrones</a>
+      <nav aria-label="Principal">
+        <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+        <ul class="menu" id="menu">
+          <li><a href="/" aria-current="page">Inicio</a></li>
+          <li><a href="/tour/">Tour</a></li>
+          <li><a href="/lanzamientos/">Música</a></li>
+          <li><a href="/videos/">Videos</a></li>
+          <li><a href="/bio/">Bio</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
+          <li><a href="https://negropasion.com/collections/ladrones" target="_blank" rel="noopener">Merch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- Último lanzamiento -->
+    <section class="seccion portada">
+      <div class="contenedor">
+        <p class="seccion-intro">Nuevo lanzamiento</p>
+        <h1>Nombre del lanzamiento</h1>
+        <p><a class="boton" href="/lanzamientos/">Escuchar</a></p>
+      </div>
+    </section>
+
+    <!-- Próximas fechas: Bandsintown -->
+    <section class="seccion" aria-labelledby="titulo-fechas">
+      <div class="contenedor">
+        <h2 id="titulo-fechas">Próximas fechas</h2>
+        <!-- Pega aquí el código del widget que generes en https://artists.bandsintown.com/support/widget-installation
+             con el nombre exacto del artista en Bandsintown. -->
+        <p class="seccion-intro">Aquí va el widget de Bandsintown.</p>
+        <p><a class="boton boton-secundario" href="/tour/">Ver todas las fechas</a></p>
+      </div>
+    </section>
+
+    <!-- Videos más nuevos del canal (automático) -->
+    <section class="seccion" aria-labelledby="titulo-videos">
+      <div class="contenedor">
+        <h2 id="titulo-videos">Lo más nuevo</h2>
+        <!-- Cambia UU_ID_DEL_CANAL por el ID del canal de YouTube de Ladrones,
+             cambiando el "UC" del inicio por "UU". -->
+        <iframe class="video"
+          src="https://www.youtube.com/embed/videoseries?list=UU_ID_DEL_CANAL"
+          title="Videos más recientes de Ladrones en YouTube"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Feed de Instagram: relleno hasta conectar Behold -->
+    <section class="seccion" aria-labelledby="titulo-instagram">
+      <div class="contenedor">
+        <h2 id="titulo-instagram">Instagram</h2>
+        <!-- Al final se reemplaza esta cuadrícula por el código del widget de Behold. -->
+        <div class="instagram" aria-hidden="true">
+          <div class="instagram-relleno"></div>
+          <div class="instagram-relleno"></div>
+          <div class="instagram-relleno"></div>
+          <div class="instagram-relleno"></div>
+          <div class="instagram-relleno"></div>
+          <div class="instagram-relleno"></div>
+        </div>
+        <p><a href="https://www.instagram.com/Ladronesmx" target="_blank" rel="noopener">@ladronesmx</a></p>
+      </div>
+    </section>
+
+    <!-- Newsletter: Mailchimp -->
+    <section class="seccion newsletter" aria-labelledby="titulo-newsletter">
+      <div class="contenedor">
+        <h2 id="titulo-newsletter">Únete a la lista</h2>
+        <p class="seccion-intro">Fechas, lanzamientos y noticias antes que nadie.</p>
+        <!-- Cuando exista la cuenta de Mailchimp, cambia el action por la URL del formulario incrustado. -->
+        <form action="#" method="post">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="FNAME" autocomplete="given-name" required>
+          </div>
+          <div>
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="EMAIL" autocomplete="email" spellcheck="false" required>
+          </div>
+          <div class="casilla">
+            <input type="checkbox" id="acepto" name="acepto" required>
+            <label for="acepto">Quiero recibir noticias de Ladrones.</label>
+          </div>
+          <button class="boton" type="submit">Suscribirme</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>Follow the L</p>
+      <ul class="redes">
+        <li><a href="https://www.instagram.com/Ladronesmx" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@ladronesmx" target="_blank" rel="noopener">TikTok</a></li>
+        <li><a href="https://www.youtube.com/@ladronesmx" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.facebook.com/ladronesmx" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Spotify</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Apple Music</a></li>
+      </ul>
+      <p>© 2026 <a href="https://www.alzada.mx">Alzada Records</a></p>
+    </div>
+  </footer>
+</body>
+</html>

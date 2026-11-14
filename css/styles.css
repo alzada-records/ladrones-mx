@@ -1,0 +1,322 @@
+/* =========================================================
+   Ladrones — estilos base
+   Colores y tipografía viven en :root para cambiarlos en un solo lugar.
+   ========================================================= */
+
+:root {
+  --color-fondo: #0b0b0b;
+  --color-superficie: #161616;
+  --color-texto: #f2f2f2;
+  --color-texto-suave: #a6a6a6;
+  --color-acento: #e10600;
+  --color-borde: #2a2a2a;
+
+  --fuente-titulos: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --fuente-texto: "Helvetica Neue", Arial, sans-serif;
+
+  --ancho-max: 1120px;
+  --espacio: 1rem;
+  --radio: 6px;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+img,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--color-acento);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-acento);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-wrap: balance;
+  margin: 0 0 var(--espacio);
+}
+
+h1 { font-size: clamp(2.25rem, 7vw, 4.5rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
+
+/* Enlace "Saltar al contenido" para teclado y lectores de pantalla */
+.saltar {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 0.75rem 1rem;
+  background: var(--color-acento);
+  color: #fff;
+  z-index: 100;
+}
+
+.saltar:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+.contenedor {
+  width: min(100% - 2rem, var(--ancho-max));
+  margin-inline: auto;
+}
+
+/* ---------- Encabezado y menú ---------- */
+
+.encabezado {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgb(11 11 11 / 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.encabezado .contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.logo {
+  font-family: var(--fuente-titulos);
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  background: none;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  color: var(--color-texto);
+  font: inherit;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu.abierto {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  padding: var(--espacio);
+  background: var(--color-fondo);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.menu a {
+  display: block;
+  padding: 0.75rem 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.9rem;
+}
+
+.menu a[aria-current="page"] {
+  color: var(--color-acento);
+}
+
+@media (min-width: 768px) {
+  .menu-boton {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    gap: 0.25rem;
+  }
+}
+
+/* ---------- Secciones ---------- */
+
+main {
+  min-height: 60vh;
+}
+
+.seccion {
+  padding-block: clamp(3rem, 8vw, 6rem);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.seccion-intro {
+  color: var(--color-texto-suave);
+  max-width: 60ch;
+}
+
+.portada {
+  padding-block: clamp(4rem, 12vw, 9rem);
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-acento);
+  border: 0;
+  border-radius: var(--radio);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+.boton:hover {
+  color: #fff;
+  filter: brightness(1.1);
+}
+
+.boton-secundario {
+  background: transparent;
+  border: 1px solid var(--color-texto);
+}
+
+/* Video 16:9 */
+.video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border: 0;
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+}
+
+/* Cuadrícula de 6 posts de Instagram (relleno por ahora) */
+.instagram {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-block: var(--espacio);
+}
+
+@media (min-width: 768px) {
+  .instagram {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.instagram-relleno {
+  aspect-ratio: 1;
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+  border: 1px dashed var(--color-borde);
+}
+
+/* ---------- Newsletter ---------- */
+
+.newsletter form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 480px;
+}
+
+.newsletter label {
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.75rem;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  color: var(--color-texto);
+  font: inherit;
+}
+
+.casilla {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+/* ---------- Pie de página ---------- */
+
+.pie {
+  padding-block: 3rem;
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+}
+
+.redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.redes a {
+  text-decoration: none;
+}
+
+/* Respetar a quien pide menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
