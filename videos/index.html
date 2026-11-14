@@ -12,6 +12,7 @@
   <link rel="icon" href="/img/favicon.png">
   <link rel="stylesheet" href="/css/styles.css">
   <script src="/js/main.js" defer></script>
+  <script src="/js/videos.js" defer></script>
 </head>
 <body>
   <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -38,15 +39,23 @@
     <section class="seccion">
       <div class="contenedor">
         <h1>Videos</h1>
-        <!-- Playlist "Web – Destacados": cambia ID_DE_LA_PLAYLIST por el ID de la playlist
-             (lo que viene después de list= en la dirección de la playlist en YouTube). -->
-        <iframe class="video"
-          src="https://www.youtube.com/embed/videoseries?list=ID_DE_LA_PLAYLIST"
-          title="Videos destacados de Ladrones"
-          loading="lazy"
+        <!-- El catálogo se arma solo con js/videos.js (YouTube Data API).
+             Mientras no haya clave, este reproductor muestra la lista de subidas del canal. -->
+        <iframe class="video" id="reproductor"
+          src="https://www.youtube.com/embed/videoseries?list=UUOFdvkFfaGgpkP9DawxAvZw"
+          title="Videos de Ladrones"
           referrerpolicy="strict-origin-when-cross-origin"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
+        <p class="video-actual" id="video-actual" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-catalogo">
+      <div class="contenedor">
+        <h2 id="titulo-catalogo">Todos los videos <span class="catalogo-estado" id="catalogo-estado">Cargando…</span></h2>
+        <ul class="videos" id="catalogo"></ul>
+        <p><a class="boton boton-secundario" href="https://www.youtube.com/@ladronesmx" target="_blank" rel="noopener">Ver el canal en YouTube</a></p>
       </div>
     </section>
   </main>
