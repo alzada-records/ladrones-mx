@@ -18,7 +18,7 @@
 
   <header class="encabezado">
     <div class="contenedor">
-      <a class="logo" href="/">Ladrones</a>
+      <a class="logo" href="/"><img src="/img/logo.webp" alt="Ladrones" width="138" height="40"></a>
       <nav aria-label="Principal">
         <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
         <ul class="menu" id="menu">
@@ -38,8 +38,23 @@
     <section class="seccion">
       <div class="contenedor">
         <h1>Tour</h1>
-        <!-- Pega aquí el widget de Bandsintown (el mismo del inicio, sin límite de fechas). -->
-        <p class="seccion-intro">Aquí va el widget de Bandsintown con todas las fechas.</p>
+        <!-- Widget de Bandsintown: Ladrones (id_15546064), todas las fechas. -->
+        <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
+        <a class="bit-widget-initializer"
+          data-artist-name="id_15546064"
+          data-app-id="js_www.ladrones.mx"
+          data-display-limit="all"
+          data-language="es"
+          data-display-local-dates="false"
+          data-display-past-dates="false"
+          data-font="Helvetica"
+          data-text-color="#f2f2f2"
+          data-link-color="#e10600"
+          data-background-color="rgba(0,0,0,0)"
+          data-popup-background-color="#161616"
+          data-separator-color="#2a2a2a"
+          data-widget-width="100%"
+          data-auto-style="false"></a>
       </div>
     </section>
   </main>

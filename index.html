@@ -20,7 +20,7 @@
 
   <header class="encabezado">
     <div class="contenedor">
-      <a class="logo" href="/">Ladrones</a>
+      <a class="logo" href="/"><img src="/img/logo.webp" alt="Ladrones" width="138" height="40"></a>
       <nav aria-label="Principal">
         <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
         <ul class="menu" id="menu">
@@ -51,9 +51,23 @@
     <section class="seccion" aria-labelledby="titulo-fechas">
       <div class="contenedor">
         <h2 id="titulo-fechas">Próximas fechas</h2>
-        <!-- Pega aquí el código del widget que generes en https://artists.bandsintown.com/support/widget-installation
-             con el nombre exacto del artista en Bandsintown. -->
-        <p class="seccion-intro">Aquí va el widget de Bandsintown.</p>
+        <!-- Widget de Bandsintown: Ladrones (id_15546064). Las fechas se actualizan solas desde Bandsintown. -->
+        <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
+        <a class="bit-widget-initializer"
+          data-artist-name="id_15546064"
+          data-app-id="js_www.ladrones.mx"
+          data-display-limit="5"
+          data-language="es"
+          data-display-local-dates="false"
+          data-display-past-dates="false"
+          data-font="Helvetica"
+          data-text-color="#f2f2f2"
+          data-link-color="#e10600"
+          data-background-color="rgba(0,0,0,0)"
+          data-popup-background-color="#161616"
+          data-separator-color="#2a2a2a"
+          data-widget-width="100%"
+          data-auto-style="false"></a>
         <p><a class="boton boton-secundario" href="/tour/">Ver todas las fechas</a></p>
       </div>
     </section>
@@ -62,12 +76,13 @@
     <section class="seccion" aria-labelledby="titulo-videos">
       <div class="contenedor">
         <h2 id="titulo-videos">Lo más nuevo</h2>
-        <!-- Cambia UU_ID_DEL_CANAL por el ID del canal de YouTube de Ladrones,
-             cambiando el "UC" del inicio por "UU". -->
+        <!-- Lista de subidas del canal de Ladrones (UCOFdvkFfaGgpkP9DawxAvZw con "UU" en lugar de "UC").
+             Siempre muestra primero el video más nuevo. -->
         <iframe class="video"
-          src="https://www.youtube.com/embed/videoseries?list=UU_ID_DEL_CANAL"
+          src="https://www.youtube.com/embed/videoseries?list=UUOFdvkFfaGgpkP9DawxAvZw"
           title="Videos más recientes de Ladrones en YouTube"
           loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
