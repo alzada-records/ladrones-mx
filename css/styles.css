@@ -193,6 +193,11 @@ main {
   min-height: 60vh;
 }
 
+/* Que los títulos no queden debajo del encabezado fijo */
+[id] {
+  scroll-margin-top: 80px;
+}
+
 .seccion {
   padding-block: clamp(3rem, 8vw, 6rem);
   border-bottom: 1px solid var(--color-borde);
@@ -314,6 +319,81 @@ main {
 
 .redes a {
   text-decoration: none;
+}
+
+/* ---------- Discografía (página Música) ---------- */
+
+.seccion-titulo {
+  padding-bottom: 1rem;
+  border-bottom: 0;
+}
+
+.discos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  .discos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1000px) {
+  .discos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.disco a {
+  display: block;
+  text-decoration: none;
+}
+
+.disco img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.disco a:hover img,
+.disco a:focus-visible img {
+  transform: scale(1.02);
+  opacity: 0.85;
+}
+
+.disco-titulo {
+  margin: 0.6rem 0 0.15rem;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.disco-info {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-texto-suave);
+}
+
+/* Portada del último lanzamiento en el inicio */
+.portada-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .portada-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+
+.portada-grid img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: var(--radio);
 }
 
 /* Respetar a quien pide menos movimiento */
