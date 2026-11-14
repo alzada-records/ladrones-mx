@@ -11,8 +11,12 @@ const LISTA_SIN_SHORTS = "UULFOFdvkFfaGgpkP9DawxAvZw";
 const LISTA_TODO = "UUOFdvkFfaGgpkP9DawxAvZw";
 
 // Guardamos el catálogo 6 horas en el navegador del visitante para no gastar cuota de más.
-const CACHE_CLAVE = "ladrones-videos-v1";
+const CACHE_CLAVE = "ladrones-videos-v2";
 const CACHE_HORAS = 6;
+
+// Solo videoclips: se saltan los que en el título dicen "Audio" o "Lyric(s)",
+// y los promos con hashtags. Para quitar otro tipo, agrégalo aquí.
+const NO_ES_VIDEOCLIP = /audio|lyric|#/i;
 
 const reproductor = document.getElementById("reproductor");
 const tituloActual = document.getElementById("video-actual");
@@ -53,6 +57,7 @@ async function traerLista(lista) {
     for (const item of datos.items || []) {
       const s = item.snippet;
       if (s.title === "Private video" || s.title === "Deleted video") continue;
+      if (NO_ES_VIDEOCLIP.test(s.title)) continue;
       const miniaturas = s.thumbnails || {};
       videos.push({
         id: item.contentDetails.videoId,
