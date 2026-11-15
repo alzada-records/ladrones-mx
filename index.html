@@ -14,6 +14,8 @@
   <link rel="icon" href="/img/favicon.png">
   <link rel="stylesheet" href="/css/styles.css">
   <script src="/js/main.js" defer></script>
+  <script src="/js/newsletter.js" defer></script>
+  <script src="/js/merch.js" defer></script>
 </head>
 <body>
   <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -39,15 +41,30 @@
   <main id="contenido">
 
     <!-- Último lanzamiento -->
-    <section class="seccion portada">
-      <div class="contenedor portada-grid">
-        <div>
+    <section class="seccion portada hero-foto hero-inicio">
+      <div class="contenedor">
+        <div class="hero-lanzamiento">
+          <img src="/img/lanzamientos/arriba-la-l.webp" alt="Portada del álbum Arriba La L" width="800" height="800" fetchpriority="high">
           <p class="seccion-intro">Nuevo álbum · 2026</p>
-          <h1>Arriba La L</h1>
-          <p><a class="boton" href="https://open.spotify.com/album/1XKtSl05ezH6lWTmVgTLUL" target="_blank" rel="noopener">Escuchar</a>
-             <a class="boton boton-secundario" href="/lanzamientos/">Toda la música</a></p>
         </div>
-        <img src="/img/lanzamientos/arriba-la-l.webp" alt="Portada del álbum Arriba La L" width="640" height="640" fetchpriority="high">
+        <h1>Arriba La L</h1>
+        <p><a class="boton" href="https://open.spotify.com/album/1XKtSl05ezH6lWTmVgTLUL" target="_blank" rel="noopener">Escuchar</a>
+           <a class="boton boton-secundario" href="/lanzamientos/">Toda la música</a></p>
+      </div>
+    </section>
+
+    <!-- Merch: productos de Negro Pasión (Shopify). Se llenan solos con js/merch.js. -->
+    <section class="seccion merch" aria-labelledby="titulo-merch">
+      <div class="contenedor">
+        <div class="merch-encabezado">
+          <h2 id="titulo-merch">Merch</h2>
+          <div class="merch-flechas" hidden>
+            <button type="button" class="merch-flecha" data-dir="-1" aria-label="Productos anteriores">←</button>
+            <button type="button" class="merch-flecha" data-dir="1" aria-label="Más productos">→</button>
+          </div>
+        </div>
+        <ul class="merch-lista" id="merch-lista" aria-live="polite"></ul>
+        <p><a class="boton boton-secundario" href="https://negropasion.com/collections/ladrones" target="_blank" rel="noopener">Ver tienda</a></p>
       </div>
     </section>
 
@@ -64,6 +81,45 @@
           referrerpolicy="strict-origin-when-cross-origin"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Barra de redes -->
+    <nav class="barra-redes" aria-label="Redes de Ladrones">
+      <div class="contenedor">
+        <ul>
+          <li><a href="https://www.instagram.com/Ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/instagram.png" alt="" width="24" height="24"><span>Instagram</span></a></li>
+          <li><a href="https://www.tiktok.com/@ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/tiktok.png" alt="" width="24" height="24"><span>TikTok</span></a></li>
+          <li><a href="https://www.youtube.com/@ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/youtube.png" alt="" width="24" height="24"><span>YouTube</span></a></li>
+          <li><a href="https://www.facebook.com/ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/facebook.png" alt="" width="24" height="24"><span>Facebook</span></a></li>
+          <li><a href="https://open.spotify.com/artist/5KGNQQzk32VSQv9If4X7A6" target="_blank" rel="noopener"><img src="/img/redes/spotify.png" alt="" width="24" height="24"><span>Spotify</span></a></li>
+          <li><a href="https://music.apple.com/mx/artist/ladrones/1617367440" target="_blank" rel="noopener"><img src="/img/redes/apple-music.png" alt="" width="24" height="24"><span>Apple Music</span></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Próximas fechas: Bandsintown -->
+    <section class="seccion fechas-inicio" aria-labelledby="titulo-fechas">
+      <div class="contenedor">
+        <h2 id="titulo-fechas">Próximas fechas</h2>
+        <!-- Widget de Bandsintown: Ladrones (id_15546064). Las fechas se actualizan solas desde Bandsintown. -->
+        <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
+        <a class="bit-widget-initializer"
+          data-artist-name="id_15546064"
+          data-app-id="js_www.ladrones.mx"
+          data-display-limit="5"
+          data-language="es"
+          data-display-local-dates="false"
+          data-display-past-dates="false"
+          data-font="Helvetica"
+          data-text-color="#f2f2f2"
+          data-link-color="#e10600"
+          data-background-color="rgba(0,0,0,0)"
+          data-popup-background-color="#161616"
+          data-separator-color="#2a2a2a"
+          data-widget-width="100%"
+          data-auto-style="false"></a>
+        <p class="fechas-boton"><a class="boton boton-secundario" href="/tour/">Ver todas las fechas</a></p>
       </div>
     </section>
 
@@ -84,38 +140,14 @@
       </div>
     </section>
 
-    <!-- Próximas fechas: Bandsintown -->
-    <section class="seccion" aria-labelledby="titulo-fechas">
-      <div class="contenedor">
-        <h2 id="titulo-fechas">Próximas fechas</h2>
-        <!-- Widget de Bandsintown: Ladrones (id_15546064). Las fechas se actualizan solas desde Bandsintown. -->
-        <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
-        <a class="bit-widget-initializer"
-          data-artist-name="id_15546064"
-          data-app-id="js_www.ladrones.mx"
-          data-display-limit="5"
-          data-language="es"
-          data-display-local-dates="false"
-          data-display-past-dates="false"
-          data-font="Helvetica"
-          data-text-color="#f2f2f2"
-          data-link-color="#e10600"
-          data-background-color="rgba(0,0,0,0)"
-          data-popup-background-color="#161616"
-          data-separator-color="#2a2a2a"
-          data-widget-width="100%"
-          data-auto-style="false"></a>
-        <p><a class="boton boton-secundario" href="/tour/">Ver todas las fechas</a></p>
-      </div>
-    </section>
-
     <!-- Newsletter: Mailchimp -->
-    <section class="seccion newsletter" aria-labelledby="titulo-newsletter">
+    <section class="seccion newsletter newsletter-foto" aria-labelledby="titulo-newsletter">
       <div class="contenedor">
+        <div class="newsletter-caja">
         <h2 id="titulo-newsletter">Únete a la lista</h2>
         <p class="seccion-intro">Fechas, lanzamientos y noticias antes que nadie.</p>
-        <!-- Cuando exista la cuenta de Mailchimp, cambia el action por la URL del formulario incrustado. -->
-        <form action="#" method="post">
+        <!-- Formulario de Mailchimp (audiencia de Alzada, us19). js/newsletter.js lo envía sin salir de la página. -->
+        <form class="form-lista" action="https://alzada.us19.list-manage.com/subscribe/post?u=32d94c0e4051438d818e68013&amp;id=4bd0645e6c&amp;f_id=00b59be3f0" method="post" target="_blank" novalidate>
           <div>
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="FNAME" autocomplete="given-name" required>
@@ -128,8 +160,12 @@
             <input type="checkbox" id="acepto" name="acepto" required>
             <label for="acepto">Quiero recibir noticias de Ladrones.</label>
           </div>
+          <!-- Campo trampa contra bots: debe quedar vacío y oculto. -->
+          <div class="trampa" aria-hidden="true"><input type="text" name="b_32d94c0e4051438d818e68013_4bd0645e6c" tabindex="-1" value="" autocomplete="off"></div>
           <button class="boton" type="submit">Suscribirme</button>
+          <p class="form-mensaje" role="status" aria-live="polite"></p>
         </form>
+        </div>
       </div>
     </section>
 
@@ -137,7 +173,7 @@
 
   <footer class="pie">
     <div class="contenedor">
-      <p>Follow the L</p>
+      <p>Sigue la L</p>
       <ul class="redes">
         <li><a href="https://www.instagram.com/Ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/instagram.png" alt="Instagram" width="28" height="28" loading="lazy"></a></li>
         <li><a href="https://www.tiktok.com/@ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/tiktok.png" alt="TikTok" width="28" height="28" loading="lazy"></a></li>
@@ -146,7 +182,7 @@
         <li><a href="https://open.spotify.com/artist/5KGNQQzk32VSQv9If4X7A6" target="_blank" rel="noopener"><img src="/img/redes/spotify.png" alt="Spotify" width="28" height="28" loading="lazy"></a></li>
         <li><a href="https://music.apple.com/mx/artist/ladrones/1617367440" target="_blank" rel="noopener"><img src="/img/redes/apple-music.png" alt="Apple Music" width="28" height="28" loading="lazy"></a></li>
       </ul>
-      <p>© 2026 <a href="https://www.alzada.mx">Alzada Records</a></p>
+      <p>© 2027 <a href="https://www.alzada.mx" target="_blank" rel="noopener">Alzada Corp</a> &amp; <a href="https://riserecords.com/" target="_blank" rel="noopener">Rise Records</a></p>
     </div>
   </footer>
 </body>

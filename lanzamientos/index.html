@@ -12,6 +12,7 @@
   <link rel="icon" href="/img/favicon.png">
   <link rel="stylesheet" href="/css/styles.css">
   <script src="/js/main.js" defer></script>
+  <script src="/js/newsletter.js" defer></script>
 </head>
 <body>
   <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -35,7 +36,7 @@
   </header>
 
   <main id="contenido">
-    <section class="seccion seccion-titulo">
+    <section class="seccion seccion-titulo hero-foto hero-musica">
       <div class="contenedor">
         <h1>Música</h1>
         <p class="seccion-intro">Discos y sencillos de Ladrones, del más nuevo al más viejo. Dale clic a una portada para escucharla en tu plataforma.</p>
@@ -50,7 +51,7 @@
         <ul class="discos">
           <li class="disco">
             <a href="https://open.spotify.com/album/1XKtSl05ezH6lWTmVgTLUL" target="_blank" rel="noopener">
-              <img src="/img/lanzamientos/arriba-la-l.webp" alt="" width="640" height="640" decoding="async">
+              <img src="/img/lanzamientos/arriba-la-l.webp" alt="" width="800" height="800" decoding="async">
               <h3 class="disco-titulo">Arriba La L</h3>
             </a>
             <p class="disco-info">Álbum · 2026</p>
@@ -79,21 +80,21 @@
         <ul class="discos">
           <li class="disco">
             <a href="https://open.spotify.com/album/46paT8xgCS6ZvjjSGkB1eO" target="_blank" rel="noopener">
-              <img src="/img/lanzamientos/arriba-la-l.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
+              <img src="/img/lanzamientos/arriba-la-l.webp" alt="" width="800" height="800" loading="lazy" decoding="async">
               <h3 class="disco-titulo">No Que No</h3>
             </a>
             <p class="disco-info">Sencillo · 2026</p>
           </li>
           <li class="disco">
             <a href="https://open.spotify.com/album/6RY9EtwiB0SI7vZNcHIPiT" target="_blank" rel="noopener">
-              <img src="/img/lanzamientos/arriba-la-l.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
+              <img src="/img/lanzamientos/arriba-la-l.webp" alt="" width="800" height="800" loading="lazy" decoding="async">
               <h3 class="disco-titulo">Arriba La L</h3>
             </a>
             <p class="disco-info">Sencillo · 2026</p>
           </li>
           <li class="disco">
             <a href="https://ladrones.lnk.to/AyAyAy" target="_blank" rel="noopener">
-              <img src="/img/lanzamientos/ay-ay-ay.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
+              <img src="/img/lanzamientos/ay-ay-ay.webp" alt="" width="800" height="800" loading="lazy" decoding="async">
               <h3 class="disco-titulo">Ay Ay Ay</h3>
             </a>
             <p class="disco-info">Sencillo · 2026</p>
@@ -227,7 +228,7 @@
         <ul class="discos">
           <li class="disco">
             <a href="https://open.spotify.com/album/5NvCktcLMOIlYHK8lnK7De" target="_blank" rel="noopener">
-              <img src="/img/lanzamientos/chip-s-metal-version.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
+              <img src="/img/lanzamientos/chip-s-metal-version.webp" alt="" width="800" height="800" loading="lazy" decoding="async">
               <h3 class="disco-titulo">Chip S (Metal Version)</h3>
             </a>
             <p class="disco-info">Sencillo · 2023<br>de Yoss Bones</p>
@@ -242,11 +243,41 @@
         </ul>
       </div>
     </section>
+
+    <!-- Newsletter: Mailchimp -->
+    <section class="seccion newsletter newsletter-foto newsletter-musica" aria-labelledby="titulo-newsletter">
+      <div class="contenedor">
+        <div class="newsletter-caja">
+        <h2 id="titulo-newsletter">Únete a la lista</h2>
+        <p class="seccion-intro">Fechas, lanzamientos y noticias antes que nadie.</p>
+        <!-- Formulario de Mailchimp (audiencia de Alzada, us19). js/newsletter.js lo envía sin salir de la página. -->
+        <form class="form-lista" action="https://alzada.us19.list-manage.com/subscribe/post?u=32d94c0e4051438d818e68013&amp;id=4bd0645e6c&amp;f_id=00b59be3f0" method="post" target="_blank" novalidate>
+          <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="FNAME" autocomplete="given-name" required>
+          </div>
+          <div>
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="EMAIL" autocomplete="email" spellcheck="false" required>
+          </div>
+          <div class="casilla">
+            <input type="checkbox" id="acepto" name="acepto" required>
+            <label for="acepto">Quiero recibir noticias de Ladrones.</label>
+          </div>
+          <!-- Campo trampa contra bots: debe quedar vacío y oculto. -->
+          <div class="trampa" aria-hidden="true"><input type="text" name="b_32d94c0e4051438d818e68013_4bd0645e6c" tabindex="-1" value="" autocomplete="off"></div>
+          <button class="boton" type="submit">Suscribirme</button>
+          <p class="form-mensaje" role="status" aria-live="polite"></p>
+        </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="pie">
     <div class="contenedor">
-      <p>Follow the L</p>
+      <p>Sigue la L</p>
       <ul class="redes">
         <li><a href="https://www.instagram.com/Ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/instagram.png" alt="Instagram" width="28" height="28" loading="lazy"></a></li>
         <li><a href="https://www.tiktok.com/@ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/tiktok.png" alt="TikTok" width="28" height="28" loading="lazy"></a></li>
@@ -255,7 +286,7 @@
         <li><a href="https://open.spotify.com/artist/5KGNQQzk32VSQv9If4X7A6" target="_blank" rel="noopener"><img src="/img/redes/spotify.png" alt="Spotify" width="28" height="28" loading="lazy"></a></li>
         <li><a href="https://music.apple.com/mx/artist/ladrones/1617367440" target="_blank" rel="noopener"><img src="/img/redes/apple-music.png" alt="Apple Music" width="28" height="28" loading="lazy"></a></li>
       </ul>
-      <p>© 2026 <a href="https://www.alzada.mx">Alzada Records</a></p>
+      <p>© 2027 <a href="https://www.alzada.mx" target="_blank" rel="noopener">Alzada Corp</a> &amp; <a href="https://riserecords.com/" target="_blank" rel="noopener">Rise Records</a></p>
     </div>
   </footer>
 </body>

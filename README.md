@@ -34,7 +34,6 @@ Busca estos textos para encontrar lo que falta llenar:
 - `UU_ID_DEL_CANAL`: ID del canal de YouTube (inicio)
 - `ID_DE_LA_PLAYLIST`: playlist "Web – Destacados" (videos)
 - `widget de Bandsintown`: código del widget (inicio y tour)
-- `action="#"`: formulario de Mailchimp (inicio)
 - `href="#"`: links de Spotify y Apple Music (pie de página)
 - `instagram-relleno`: se cambia por el widget de Behold al final
 
@@ -44,6 +43,5 @@ Busca estos textos para encontrar lo que falta llenar:
 - [ ] Fotos de la banda en Bio (van en `/img/prensa/`)
 - [ ] Portadas en alta de Arriba La L, Ay Ay Ay y Chip S
 - [ ] Favicon (logo cuadrado)
-- [ ] Formulario de Mailchimp (inicio)
 - [ ] Feed de Instagram con Behold (inicio)
 - [ ] Netlify y conectar el dominio ladrones.mx

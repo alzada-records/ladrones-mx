@@ -306,10 +306,12 @@ main {
   padding-block: 3rem;
   color: var(--color-texto-suave);
   font-size: 0.9rem;
+  text-align: center;
 }
 
 .redes {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem 1.25rem;
   list-style: none;
@@ -502,25 +504,139 @@ main {
 }
 
 /* ---------- Bio ---------- */
-.bio-texto {
-  max-width: 68ch;
-  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+.hero-bio {
+  min-height: clamp(520px, 85vh, 860px);
+  background-image:
+    linear-gradient(to top, rgb(11 11 11 / 1) 0%, rgb(11 11 11 / 0.92) 40%, rgb(11 11 11 / 0.3) 75%, rgb(11 11 11 / 0.2)),
+    url("/img/fondos/bio-960.webp");
+  background-position: center 20%;
 }
 
-.bio-texto p {
+@media (min-width: 900px) {
+  .hero-bio {
+    background-image:
+      linear-gradient(to top, rgb(11 11 11 / 1) 0%, rgb(11 11 11 / 0.92) 32%, rgb(11 11 11 / 0.35) 58%, rgb(11 11 11 / 0.15)),
+      url("/img/fondos/bio-1920.webp");
+    /* Foto a todo lo ancho y subida, para que las caras queden arriba del texto. */
+    background-size: cover, 100% auto;
+    background-position: center, center -13vw;
+  }
+}
+
+.bio-entrada {
+  max-width: 52ch;
+  margin: 0;
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  line-height: 1.55;
+  color: var(--color-texto);
+}
+
+.bio-bloque {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .bio-bloque {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    gap: clamp(2rem, 6vw, 5rem);
+    align-items: start;
+  }
+}
+
+.bio-parrafo {
+  max-width: 40ch;
+  color: var(--color-texto-suave);
   line-height: 1.7;
+}
+
+.bio-parrafo em { color: var(--color-texto); }
+
+.bio-discos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bio-discos a {
+  display: grid;
+  gap: 0.25rem;
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+.bio-discos img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radio);
+  margin-bottom: 0.4rem;
+  transition: transform 0.2s ease;
+}
+
+.bio-discos a:hover img,
+.bio-discos a:focus-visible img { transform: translateY(-3px); }
+
+.bio-disco-nombre { font-weight: 600; line-height: 1.3; }
+.bio-disco-anio { color: var(--color-texto-suave); font-size: 0.9rem; }
+
+.bio-subtitulo {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-acento);
+}
+
+.bio-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.bio-chips li {
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 999px;
+  background: var(--color-superficie);
+  font-size: 0.95rem;
+}
+
+.bio-cita {
+  text-align: center;
+}
+
+.bio-cita-texto {
+  max-width: 36ch;
+  margin: 0 auto;
+  font-family: var(--fuente-titulos);
+  text-transform: uppercase;
+  font-size: clamp(1.2rem, 2.6vw, 1.9rem);
+  line-height: 1.25;
+}
+
+.bio-cita-texto em {
+  white-space: nowrap;
+}
+
+.bio-cita-texto em {
+  font-style: normal;
+  color: var(--color-acento);
+}
+
+.bio-cita-pie {
+  margin: 1.25rem auto 0;
+  max-width: 50ch;
   color: var(--color-texto-suave);
 }
 
-.bio-texto .bio-entrada {
-  font-size: clamp(1.15rem, 2.4vw, 1.4rem);
-  line-height: 1.5;
-  color: var(--color-texto);
-}
-
-.bio-texto strong,
-.bio-texto em {
-  color: var(--color-texto);
+@media (prefers-reduced-motion: reduce) {
+  .bio-discos img { transition: none; }
 }
 
 .integrantes {
@@ -609,4 +725,423 @@ main {
   content: " ↗";
   font-family: var(--fuente-texto);
   font-size: 0.8em;
+}
+
+/* ---------- Newsletter con foto de fondo (inicio) ---------- */
+.newsletter-foto {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--color-fondo);
+  background-image:
+    linear-gradient(to bottom, rgb(11 11 11 / 0.35), rgb(11 11 11 / 0.85)),
+    url("/img/fondos/lista-960.webp");
+  background-size: cover;
+  background-position: 30% center;
+}
+
+.newsletter-foto .newsletter-caja {
+  max-width: 480px;
+}
+
+@media (min-width: 900px) {
+  .newsletter-foto {
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    background-image:
+      linear-gradient(to right, rgb(11 11 11 / 0) 35%, rgb(11 11 11 / 0.75) 62%, rgb(11 11 11 / 0.9)),
+      url("/img/fondos/lista-1920.webp");
+    background-position: left center;
+  }
+
+  .newsletter-foto .contenedor {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .newsletter-foto .newsletter-caja {
+    width: 100%;
+  }
+}
+
+.newsletter-foto input[type="text"],
+.newsletter-foto input[type="email"] {
+  background: rgb(22 22 22 / 0.8);
+}
+
+
+/* ---------- Hero con foto (Música) ---------- */
+.hero-foto {
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(420px, 70vh, 720px);
+  background-color: var(--color-fondo);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-foto .seccion-intro {
+  color: var(--color-texto);
+}
+
+.hero-musica {
+  background-image:
+    linear-gradient(to top, rgb(11 11 11 / 1) 0%, rgb(11 11 11 / 0.75) 30%, rgb(11 11 11 / 0) 65%),
+    url("/img/fondos/musica-rojo-960.webp");
+  background-position: 60% 20%;
+}
+
+@media (min-width: 900px) {
+  .hero-musica {
+    background-image:
+      linear-gradient(to top, rgb(11 11 11 / 1) 0%, rgb(11 11 11 / 0.55) 28%, rgb(11 11 11 / 0) 55%),
+      url("/img/fondos/musica-rojo-1920.webp");
+    background-position: center 25%;
+  }
+}
+
+/* ---------- Hero con foto (Inicio) ---------- */
+.hero-inicio {
+  min-height: clamp(520px, 85vh, 860px);
+  background-image:
+    linear-gradient(to top, rgb(11 11 11 / 1) 0%, rgb(11 11 11 / 0.75) 30%, rgb(11 11 11 / 0.15) 70%),
+    url("/img/fondos/musica-960.webp");
+  background-position: center 20%;
+}
+
+@media (min-width: 900px) {
+  .hero-inicio {
+    background-image:
+      linear-gradient(to top, rgb(11 11 11 / 1) 0%, rgb(11 11 11 / 0.6) 30%, rgb(11 11 11 / 0) 60%),
+      linear-gradient(to right, rgb(11 11 11 / 0.7), rgb(11 11 11 / 0) 50%),
+      url("/img/fondos/musica-1920.webp");
+  }
+}
+
+.hero-lanzamiento {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-lanzamiento img {
+  width: 64px;
+  height: 64px;
+  border-radius: 4px;
+  border: 1px solid rgb(255 255 255 / 0.35);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.5);
+}
+
+.hero-lanzamiento .seccion-intro {
+  margin: 0;
+}
+
+/* ---------- Merch (carrusel de Negro Pasión) ---------- */
+.merch-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.merch-flechas {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.merch-flechas[hidden] {
+  display: none;
+}
+
+.merch-flecha {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-borde);
+  border-radius: 50%;
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.merch-flecha:hover,
+.merch-flecha:focus-visible {
+  border-color: var(--color-acento);
+}
+
+.merch-lista {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 70%;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 0 0 0.75rem;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  overscroll-behavior-x: contain;
+}
+
+.merch-lista:empty {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .merch-lista { grid-auto-columns: calc((100% - 2rem) / 3); }
+}
+
+@media (min-width: 900px) {
+  .merch-lista { grid-auto-columns: calc((100% - 3rem) / 4); }
+}
+
+.merch-producto {
+  scroll-snap-align: start;
+}
+
+.merch-producto a {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+.merch-foto {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radio);
+  background: #f2f2f2;
+}
+
+.merch-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.merch-producto a:hover .merch-foto img,
+.merch-producto a:focus-visible .merch-foto img {
+  transform: scale(1.04);
+}
+
+.merch-agotado {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  background: var(--color-fondo);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.merch-nombre {
+  margin-top: 0.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.merch-precio {
+  color: var(--color-texto-suave);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .merch-foto img { transition: none; }
+}
+
+/* ---------- Hero con foto (Tour) ---------- */
+.hero-tour {
+  background-image:
+    linear-gradient(to top, rgb(11 11 11 / 1) 0%, rgb(11 11 11 / 0.8) 30%, rgb(11 11 11 / 0.2) 70%),
+    url("/img/fondos/tour-escenario-960.webp");
+  background-position: center 30%;
+}
+
+@media (min-width: 900px) {
+  .hero-tour {
+    background-image:
+      linear-gradient(to top, rgb(11 11 11 / 1) 0%, rgb(11 11 11 / 0.65) 30%, rgb(11 11 11 / 0) 60%),
+      linear-gradient(to right, rgb(11 11 11 / 0.6), rgb(11 11 11 / 0) 50%),
+      url("/img/fondos/tour-escenario-1920.webp");
+    background-position: center 35%;
+  }
+}
+
+/* Tour: formulario a la derecha con la foto del público de fondo */
+.newsletter-tour {
+  background-image:
+    linear-gradient(to bottom, rgb(11 11 11 / 0.7), rgb(11 11 11 / 0.92)),
+    url("/img/fondos/tour-960.webp");
+  background-position: 25% center;
+}
+
+@media (min-width: 900px) {
+  .newsletter-tour {
+    background-image:
+      linear-gradient(to right, rgb(11 11 11 / 0.1) 30%, rgb(11 11 11 / 0.88) 55%, rgb(11 11 11 / 0.95)),
+      url("/img/fondos/tour-1920.webp");
+    background-position: left center;
+  }
+}
+
+/* ---------- Barra de redes (inicio) ---------- */
+.barra-redes {
+  border-bottom: 1px solid var(--color-borde);
+  background: var(--color-superficie);
+}
+
+.barra-redes ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem clamp(0.5rem, 3vw, 2.5rem);
+  margin: 0;
+  padding: 0.75rem 0;
+  list-style: none;
+}
+
+.barra-redes a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0 0.5rem;
+  color: var(--color-texto);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.barra-redes a:hover,
+.barra-redes a:focus-visible {
+  opacity: 1;
+  color: var(--color-acento);
+}
+
+.barra-redes img {
+  width: 24px;
+  height: 24px;
+}
+
+/* En celular solo los íconos; el nombre queda para lectores de pantalla. */
+@media (max-width: 699px) {
+  .barra-redes span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
+
+/* Música: formulario a la derecha con la foto del altar de fondo */
+.newsletter-musica {
+  background-image:
+    linear-gradient(to bottom, rgb(11 11 11 / 0.55), rgb(11 11 11 / 0.9)),
+    url("/img/fondos/lista-altar-960.webp");
+  background-position: 45% center;
+}
+
+@media (min-width: 900px) {
+  .newsletter-musica {
+    background-image:
+      linear-gradient(to right, rgb(11 11 11 / 0) 35%, rgb(11 11 11 / 0.82) 58%, rgb(11 11 11 / 0.93)),
+      url("/img/fondos/lista-altar-1920.webp");
+    background-size: cover, auto 135%;
+    background-position: center, left 40%;
+  }
+}
+
+/* Videos: formulario a la derecha con la foto de la calavera de fondo */
+.newsletter-videos {
+  background-image:
+    linear-gradient(to bottom, rgb(11 11 11 / 0.55), rgb(11 11 11 / 0.9)),
+    url("/img/fondos/lista-calavera-960.webp");
+  background-position: 40% center;
+}
+
+@media (min-width: 900px) {
+  .newsletter-videos {
+    background-image:
+      linear-gradient(to right, rgb(11 11 11 / 0) 35%, rgb(11 11 11 / 0.82) 58%, rgb(11 11 11 / 0.93)),
+      url("/img/fondos/lista-calavera-1920.webp");
+    background-size: cover, auto 125%;
+    background-position: center, left 55%;
+  }
+}
+
+/* Bio: formulario a la derecha con la foto de la mano (vertical) de fondo */
+.newsletter-bio {
+  background-image:
+    linear-gradient(to bottom, rgb(11 11 11 / 0.55), rgb(11 11 11 / 0.9)),
+    url("/img/fondos/lista-mano-800.webp");
+  background-position: center 45%;
+}
+
+@media (min-width: 900px) {
+  .newsletter-bio {
+    background-image:
+      linear-gradient(to right, rgb(11 11 11 / 0) 280px, rgb(11 11 11 / 0.9) 600px, rgb(11 11 11 / 1) 690px),
+      url("/img/fondos/lista-mano-1200.webp");
+    background-size: cover, auto 170%;
+    background-position: center, left 48%;
+  }
+}
+
+/* ---------- Próximas fechas en el inicio ---------- */
+/* Ocultamos los extras del widget de Bandsintown; queda nuestro botón "Ver todas las fechas". */
+.fechas-inicio .bit-upcoming-events-show-all-button,
+.fechas-inicio .bit-play-my-city-wrapper,
+.fechas-inicio .bit-logo-link {
+  display: none !important;
+}
+
+.fechas-boton {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* ---------- Formulario de la lista (mensajes) ---------- */
+.trampa {
+  position: absolute;
+  left: -5000px;
+}
+
+.form-mensaje {
+  min-height: 1.5em;
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: var(--color-texto-suave);
+}
+
+.form-mensaje[data-tipo="ok"] { color: #7bd88f; }
+.form-mensaje[data-tipo="error"] { color: #ff6b6b; }
+
+.form-lista button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+/* Crédito del fotógrafo en la esquina de un encabezado con foto */
+.hero-foto {
+  position: relative;
+}
+
+.credito-foto {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.75rem;
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: rgb(242 242 242 / 0.6);
 }
