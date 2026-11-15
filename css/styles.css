@@ -1099,6 +1099,7 @@ main {
 
 /* ---------- Próximas fechas en el inicio ---------- */
 /* Ocultamos los extras del widget de Bandsintown; queda nuestro botón "Ver todas las fechas". */
+.fechas-inicio .bit-follow-section-wrapper,
 .fechas-inicio .bit-upcoming-events-show-all-button,
 .fechas-inicio .bit-play-my-city-wrapper,
 .fechas-inicio .bit-logo-link {
