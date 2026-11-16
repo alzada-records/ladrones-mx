@@ -23,7 +23,7 @@ const tituloActual = document.getElementById("video-actual");
 const cuadricula = document.getElementById("catalogo");
 const estado = document.getElementById("catalogo-estado");
 
-const fecha = new Intl.DateTimeFormat("es-MX", { day: "numeric", month: "short", year: "numeric" });
+const fecha = new Intl.DateTimeFormat(document.documentElement.lang === "en" ? "en-US" : "es-MX", { day: "numeric", month: "short", year: "numeric" });
 
 function leerCache() {
   try {

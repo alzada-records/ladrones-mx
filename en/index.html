@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO: copia el título y la descripción de la hoja de inventario (pestaña Páginas y SEO) -->
+  <title>Ladrones | Official Site</title>
+  <meta name="description" content="Official site of Ladrones: music, tour dates, videos and merch.">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta property="og:title" content="Ladrones | Official Site">
+  <meta property="og:description" content="Official site of Ladrones: music, tour dates, videos and merch.">
+  <meta property="og:image" content="https://www.ladrones.mx/img/compartir.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The members of Ladrones">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ladrones">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.ladrones.mx/en/">
+  <link rel="alternate" hreflang="es" href="https://www.ladrones.mx/">
+  <link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/">
+  <link rel="icon" href="/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/idioma.js"></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/newsletter.js" defer></script>
+  <script src="/js/merch.js" defer></script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Skip to content</a>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="/en/"><img src="/img/logo.webp" alt="Ladrones" width="138" height="40"></a>
+      <nav aria-label="Main">
+        <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul class="menu" id="menu">
+          <li><a href="/en/" aria-current="page">Home</a></li>
+          <li><a href="/en/tour/">Tour</a></li>
+          <li><a href="/en/music/">Music</a></li>
+          <li><a href="/en/videos/">Videos</a></li>
+          <li><a href="/en/bio/">Bio</a></li>
+          <li><a href="/en/contact/">Contact</a></li>
+          <li><a href="https://negropasion.com/collections/ladrones" target="_blank" rel="noopener">Merch</a></li>
+
+
+          <li class="idioma"><a href="/" lang="es" hreflang="es" data-idioma="es" aria-label="Español">ES</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- Último lanzamiento -->
+    <section class="seccion portada hero-foto hero-inicio">
+      <div class="contenedor">
+        <div class="hero-lanzamiento">
+          <img src="/img/lanzamientos/arriba-la-l.webp" alt="Arriba La L album cover" width="800" height="800" fetchpriority="high">
+          <p class="seccion-intro">New album · 2026</p>
+        </div>
+        <h1>Arriba La L</h1>
+        <p><a class="boton" href="https://open.spotify.com/album/1XKtSl05ezH6lWTmVgTLUL" target="_blank" rel="noopener">Listen</a>
+           <a class="boton boton-secundario" href="/en/music/">All music</a></p>
+      </div>
+    </section>
+
+    <!-- Merch: productos de Negro Pasión (Shopify). Se llenan solos con js/merch.js. -->
+    <section class="seccion merch" aria-labelledby="titulo-merch">
+      <div class="contenedor">
+        <div class="merch-encabezado">
+          <h2 id="titulo-merch">Merch</h2>
+          <div class="merch-flechas" hidden>
+            <button type="button" class="merch-flecha" data-dir="-1" aria-label="Previous products">←</button>
+            <button type="button" class="merch-flecha" data-dir="1" aria-label="More products">→</button>
+          </div>
+        </div>
+        <ul class="merch-lista" id="merch-lista" aria-live="polite"></ul>
+        <p><a class="boton boton-secundario" href="https://negropasion.com/collections/ladrones" target="_blank" rel="noopener">Shop now</a></p>
+      </div>
+    </section>
+
+    <!-- Videos más nuevos del canal (automático) -->
+    <section class="seccion" aria-labelledby="titulo-videos">
+      <div class="contenedor">
+        <h2 id="titulo-videos">Latest video</h2>
+        <!-- Lista de subidas del canal de Ladrones (UCOFdvkFfaGgpkP9DawxAvZw con "UU" en lugar de "UC").
+             Siempre muestra primero el video más nuevo. -->
+        <iframe class="video"
+          src="https://www.youtube.com/embed/videoseries?list=UUOFdvkFfaGgpkP9DawxAvZw"
+          title="Latest Ladrones videos on YouTube"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Barra de redes -->
+    <nav class="barra-redes" aria-label="Ladrones on social media">
+      <div class="contenedor">
+        <ul>
+          <li><a href="https://www.instagram.com/Ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/instagram.png" alt="" width="24" height="24"><span>Instagram</span></a></li>
+          <li><a href="https://www.tiktok.com/@ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/tiktok.png" alt="" width="24" height="24"><span>TikTok</span></a></li>
+          <li><a href="https://www.youtube.com/@ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/youtube.png" alt="" width="24" height="24"><span>YouTube</span></a></li>
+          <li><a href="https://www.facebook.com/ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/facebook.png" alt="" width="24" height="24"><span>Facebook</span></a></li>
+          <li><a href="https://open.spotify.com/artist/5KGNQQzk32VSQv9If4X7A6" target="_blank" rel="noopener"><img src="/img/redes/spotify.png" alt="" width="24" height="24"><span>Spotify</span></a></li>
+          <li><a href="https://music.apple.com/mx/artist/ladrones/1617367440" target="_blank" rel="noopener"><img src="/img/redes/apple-music.png" alt="" width="24" height="24"><span>Apple Music</span></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Próximas fechas: Bandsintown -->
+    <section class="seccion fechas-inicio" aria-labelledby="titulo-fechas">
+      <div class="contenedor">
+        <h2 id="titulo-fechas">Upcoming shows</h2>
+        <!-- Widget de Bandsintown: Ladrones (id_15546064). Las fechas se actualizan solas desde Bandsintown. -->
+        <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
+        <a class="bit-widget-initializer"
+          data-artist-name="id_15546064"
+          data-app-id="js_www.ladrones.mx"
+          data-display-limit="5"
+          data-language="en"
+          data-display-local-dates="false"
+          data-display-past-dates="false"
+          data-font="Helvetica"
+          data-text-color="#f2f2f2"
+          data-link-color="#e10600"
+          data-background-color="rgba(0,0,0,0)"
+          data-popup-background-color="#161616"
+          data-separator-color="#2a2a2a"
+          data-widget-width="100%"
+          data-auto-style="false"></a>
+        <p class="fechas-boton"><a class="boton boton-secundario" href="/en/tour/">See all dates</a></p>
+      </div>
+    </section>
+
+    <!-- Feed de Instagram: relleno hasta conectar Behold -->
+    <section class="seccion" aria-labelledby="titulo-instagram">
+      <div class="contenedor">
+        <h2 id="titulo-instagram">Instagram</h2>
+        <!-- Al final se reemplaza esta cuadrícula por el código del widget de Behold. -->
+        <div class="instagram" aria-hidden="true">
+          <div class="instagram-relleno"></div>
+          <div class="instagram-relleno"></div>
+          <div class="instagram-relleno"></div>
+          <div class="instagram-relleno"></div>
+          <div class="instagram-relleno"></div>
+          <div class="instagram-relleno"></div>
+        </div>
+        <p><a href="https://www.instagram.com/Ladronesmx" target="_blank" rel="noopener">@ladronesmx</a></p>
+      </div>
+    </section>
+
+    <!-- Newsletter: Mailchimp -->
+    <section class="seccion newsletter newsletter-foto" aria-labelledby="titulo-newsletter">
+      <div class="contenedor">
+        <div class="newsletter-caja">
+        <h2 id="titulo-newsletter">Join the list</h2>
+        <p class="seccion-intro">Tour dates, new music and news before anyone else.</p>
+        <!-- Formulario de Mailchimp (audiencia de Alzada, us19). js/newsletter.js lo envía sin salir de la página. -->
+        <form class="form-lista" action="https://alzada.us19.list-manage.com/subscribe/post?u=32d94c0e4051438d818e68013&amp;id=4bd0645e6c&amp;f_id=00b59be3f0" method="post" target="_blank" novalidate>
+          <div>
+            <label for="nombre">Name</label>
+            <input type="text" id="nombre" name="FNAME" autocomplete="given-name" required>
+          </div>
+          <div>
+            <label for="correo">Email</label>
+            <input type="email" id="correo" name="EMAIL" autocomplete="email" spellcheck="false" required>
+          </div>
+          <div class="casilla">
+            <input type="checkbox" id="acepto" name="acepto" required>
+            <label for="acepto">I want to get news from Ladrones.</label>
+          </div>
+          <!-- Campo trampa contra bots: debe quedar vacío y oculto. -->
+          <div class="trampa" aria-hidden="true"><input type="text" name="b_32d94c0e4051438d818e68013_4bd0645e6c" tabindex="-1" value="" autocomplete="off"></div>
+          <button class="boton" type="submit">Subscribe</button>
+          <p class="form-mensaje" role="status" aria-live="polite"></p>
+        </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>Follow the L</p>
+      <ul class="redes">
+        <li><a href="https://www.instagram.com/Ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/instagram.png" alt="Instagram" width="28" height="28" loading="lazy"></a></li>
+        <li><a href="https://www.tiktok.com/@ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/tiktok.png" alt="TikTok" width="28" height="28" loading="lazy"></a></li>
+        <li><a href="https://www.youtube.com/@ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/youtube.png" alt="YouTube" width="28" height="28" loading="lazy"></a></li>
+        <li><a href="https://www.facebook.com/ladronesmx" target="_blank" rel="noopener"><img src="/img/redes/facebook.png" alt="Facebook" width="28" height="28" loading="lazy"></a></li>
+        <li><a href="https://open.spotify.com/artist/5KGNQQzk32VSQv9If4X7A6" target="_blank" rel="noopener"><img src="/img/redes/spotify.png" alt="Spotify" width="28" height="28" loading="lazy"></a></li>
+        <li><a href="https://music.apple.com/mx/artist/ladrones/1617367440" target="_blank" rel="noopener"><img src="/img/redes/apple-music.png" alt="Apple Music" width="28" height="28" loading="lazy"></a></li>
+      </ul>
+      <p>© 2027 <a href="https://www.alzada.mx" target="_blank" rel="noopener">Alzada Corp</a> &amp; <a href="https://riserecords.com/" target="_blank" rel="noopener">Rise Records</a></p>
+    </div>
+  </footer>
+</body>
+</html>

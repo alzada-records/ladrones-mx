@@ -6,7 +6,8 @@ const COLECCION = "ladrones";
 
 const lista = document.getElementById("merch-lista");
 const flechas = document.querySelector(".merch-flechas");
-const precio = new Intl.NumberFormat("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 });
+const MERCH_EN = document.documentElement.lang === "en";
+const precio = new Intl.NumberFormat(MERCH_EN ? "en-US" : "es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 });
 
 // "Hoddie Oficial - Ladrones - Mapache" -> "Hoddie Oficial · Mapache"
 function limpiarTitulo(t) {
@@ -48,7 +49,7 @@ function pintar(productos) {
     if (!disponible) {
       const etiqueta = document.createElement("span");
       etiqueta.className = "merch-agotado";
-      etiqueta.textContent = "Agotado";
+      etiqueta.textContent = MERCH_EN ? "Sold out" : "Agotado";
       marco.append(etiqueta);
     }
 

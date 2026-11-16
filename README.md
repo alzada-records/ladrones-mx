@@ -37,9 +37,17 @@ Busca estos textos para encontrar lo que falta llenar:
 - `href="#"`: links de Spotify y Apple Music (pie de página)
 - `instagram-relleno`: se cambia por el widget de Behold al final
 
+## Dos idiomas
+
+- Español en la raíz (`/`, `/tour/`, `/lanzamientos/`…) e inglés en `/en/` (`/en/`, `/en/tour/`, `/en/music/`, `/en/videos/`, `/en/bio/`, `/en/contact/`).
+- **Cada cambio de texto va en las dos versiones**: el archivo en español y su par en `en/`.
+- `js/idioma.js`: botón ES | EN (guarda la elección) y, en la portada, manda a `/en/` si la persona eligió inglés o si es su primera visita y su dispositivo no está en español. No redirige a buscadores.
+- Los scripts (`newsletter.js`, `merch.js`, `videos.js`) leen `<html lang>` y muestran sus textos en el idioma de la página.
+- Cada página tiene etiquetas `hreflang` que le dicen a Google cuál es su versión en el otro idioma.
+- `en/404.html` es la página de error en inglés (falta la regla en Netlify para usarla en `/en/*`).
+
 ## Lista de pendientes
 
-- [ ] Versión en inglés del sitio (al menos Bio y Contacto; decidir si todo el sitio va en inglés y español)
 - [ ] Fotos de la banda en Bio (van en `/img/prensa/`)
 - [ ] Portadas en alta de Arriba La L, Ay Ay Ay y Chip S
 - [ ] Favicon (logo cuadrado)
