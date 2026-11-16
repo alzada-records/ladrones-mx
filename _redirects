@@ -1,0 +1,18 @@
+# Reglas para Netlify (se leen de arriba hacia abajo)
+
+# Siempre en www
+https://ladrones.mx/*  https://www.ladrones.mx/:splat  301!
+
+# Páginas viejas de Wix
+/event-details/*  /tour/  301
+/profile/*        /       301
+/members/*        /       301
+/blank*           /       301
+/music            /lanzamientos/  301
+/musica           /lanzamientos/  301
+/contact          /contacto/      301
+/en/lanzamientos  /en/music/      301
+/en/contacto      /en/contact/    301
+
+# Página de error en inglés
+/en/*  /en/404.html  404

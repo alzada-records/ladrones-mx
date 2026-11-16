@@ -78,7 +78,8 @@ function reproducir(video, desplazar) {
   cuadricula.querySelectorAll("[aria-current]").forEach((b) => b.removeAttribute("aria-current"));
   const boton = cuadricula.querySelector(`[data-id="${video.id}"]`);
   if (boton) boton.setAttribute("aria-current", "true");
-  if (desplazar) reproductor.scrollIntoView({ behavior: "smooth", block: "center" });
+  const suave = !matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (desplazar) reproductor.scrollIntoView({ behavior: suave ? "smooth" : "auto", block: "center" });
 }
 
 function pintar(videos) {
@@ -98,6 +99,7 @@ function pintar(videos) {
     img.decoding = "async";
     const titulo = document.createElement("span");
     titulo.className = "video-titulo";
+    titulo.translate = false;
     titulo.textContent = video.titulo;
     const cuando = document.createElement("span");
     cuando.className = "video-fecha";

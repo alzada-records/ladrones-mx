@@ -69,7 +69,8 @@ function pintar(productos) {
 function moverCarrusel(direccion) {
   const tarjeta = lista.querySelector(".merch-producto");
   const paso = tarjeta ? tarjeta.getBoundingClientRect().width + 16 : 300;
-  lista.scrollBy({ left: direccion * paso * 2, behavior: "smooth" });
+  const suave = !matchMedia("(prefers-reduced-motion: reduce)").matches;
+  lista.scrollBy({ left: direccion * paso * 2, behavior: suave ? "smooth" : "auto" });
 }
 
 async function iniciar() {

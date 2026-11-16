@@ -18,11 +18,17 @@
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://www.ladrones.mx/en/">
+  <link rel="canonical" href="https://www.ladrones.mx/en/">
   <link rel="alternate" hreflang="es" href="https://www.ladrones.mx/">
   <link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/">
   <link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/">
   <link rel="icon" href="/img/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/img/fondos/musica-1920.webp" media="(min-width: 900px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/img/fondos/musica-960.webp" media="(max-width: 899px)" fetchpriority="high">
+  <link rel="preconnect" href="https://negropasion.com">
+  <link rel="preconnect" href="https://www.youtube.com">
+  <link rel="preconnect" href="https://widgetv3.bandsintown.com">
   <link rel="stylesheet" href="/css/styles.css">
   <script src="/js/idioma.js"></script>
   <script src="/js/main.js" defer></script>
@@ -59,10 +65,10 @@
     <section class="seccion portada hero-foto hero-inicio">
       <div class="contenedor">
         <div class="hero-lanzamiento">
-          <img src="/img/lanzamientos/arriba-la-l.webp" alt="Arriba La L album cover" width="800" height="800" fetchpriority="high">
+          <img src="/img/lanzamientos/arriba-la-l.webp" alt="Arriba La L album cover" width="800" height="800">
           <p class="seccion-intro">New album · 2026</p>
         </div>
-        <h1>Arriba La L</h1>
+        <h1><span translate="no">Arriba La L</span></h1>
         <p><a class="boton" href="https://open.spotify.com/album/1XKtSl05ezH6lWTmVgTLUL" target="_blank" rel="noopener">Listen</a>
            <a class="boton boton-secundario" href="/en/music/">All music</a></p>
       </div>
@@ -162,7 +168,7 @@
         <h2 id="titulo-newsletter">Join the list</h2>
         <p class="seccion-intro">Tour dates, new music and news before anyone else.</p>
         <!-- Formulario de Mailchimp (audiencia de Alzada, us19). js/newsletter.js lo envía sin salir de la página. -->
-        <form class="form-lista" action="https://alzada.us19.list-manage.com/subscribe/post?u=32d94c0e4051438d818e68013&amp;id=4bd0645e6c&amp;f_id=00b59be3f0" method="post" target="_blank" novalidate>
+        <form class="form-lista" action="https://alzada.us19.list-manage.com/subscribe/post?u=32d94c0e4051438d818e68013&amp;id=4bd0645e6c&amp;f_id=00b59be3f0" method="post" target="_blank" rel="noopener" novalidate>
           <div>
             <label for="nombre">Name</label>
             <input type="text" id="nombre" name="FNAME" autocomplete="given-name" required>
@@ -173,7 +179,7 @@
           </div>
           <div class="casilla">
             <input type="checkbox" id="acepto" name="acepto" required>
-            <label for="acepto">I want to get news from Ladrones.</label>
+            <label for="acepto">I want to get news from <span translate="no">Ladrones</span>.</label>
           </div>
           <!-- Campo trampa contra bots: debe quedar vacío y oculto. -->
           <div class="trampa" aria-hidden="true"><input type="text" name="b_32d94c0e4051438d818e68013_4bd0645e6c" tabindex="-1" value="" autocomplete="off"></div>

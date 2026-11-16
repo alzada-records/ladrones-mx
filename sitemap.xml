@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.ladrones.mx/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ladrones.mx/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/"/>
+  </url>
+  <url>
+    <loc>https://www.ladrones.mx/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ladrones.mx/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/"/>
+  </url>
+  <url>
+    <loc>https://www.ladrones.mx/tour/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ladrones.mx/tour/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/tour/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/tour/"/>
+  </url>
+  <url>
+    <loc>https://www.ladrones.mx/en/tour/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ladrones.mx/tour/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/tour/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/tour/"/>
+  </url>
+  <url>
+    <loc>https://www.ladrones.mx/lanzamientos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ladrones.mx/lanzamientos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/music/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/lanzamientos/"/>
+  </url>
+  <url>
+    <loc>https://www.ladrones.mx/en/music/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ladrones.mx/lanzamientos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/music/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/lanzamientos/"/>
+  </url>
+  <url>
+    <loc>https://www.ladrones.mx/videos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ladrones.mx/videos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/videos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/videos/"/>
+  </url>
+  <url>
+    <loc>https://www.ladrones.mx/en/videos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ladrones.mx/videos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/videos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/videos/"/>
+  </url>
+  <url>
+    <loc>https://www.ladrones.mx/bio/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ladrones.mx/bio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/bio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/bio/"/>
+  </url>
+  <url>
+    <loc>https://www.ladrones.mx/en/bio/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ladrones.mx/bio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/bio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/bio/"/>
+  </url>
+  <url>
+    <loc>https://www.ladrones.mx/contacto/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ladrones.mx/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/contacto/"/>
+  </url>
+  <url>
+    <loc>https://www.ladrones.mx/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ladrones.mx/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ladrones.mx/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ladrones.mx/contacto/"/>
+  </url>
+</urlset>

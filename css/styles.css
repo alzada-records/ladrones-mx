@@ -1164,3 +1164,18 @@ main {
 .menu .idioma a:focus-visible {
   border-color: var(--color-acento);
 }
+
+/* ---------- Ajustes de la revisión (accesibilidad y táctil) ---------- */
+/* Al navegar con teclado, que el encabezado fijo no tape lo enfocado */
+html {
+  scroll-padding-top: 92px;
+}
+
+/* Sin retraso de doble toque en celular; el foco visible ya marca el estado */
+a,
+button,
+input,
+label {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
