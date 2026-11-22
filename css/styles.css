@@ -1184,3 +1184,13 @@ label {
 @media (max-width: 480px) {
   .redes { gap: 0.5rem 0.25rem; }
 }
+
+.form-nota {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.form-nota a {
+  color: inherit;
+}
