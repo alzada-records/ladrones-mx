@@ -39,7 +39,6 @@ Las rutas empiezan con `/` (por ejemplo `/css/styles.css`), por eso no funcionan
 ## Lista de pendientes
 
 - [ ] Feed de Instagram con Behold (inicio): conectar la cuenta @ladronesmx y cambiar `instagram-relleno` por el widget
-- [ ] Smart link de Arriba La L
 - [ ] Etiquetas en Mailchimp (Ladrones / Alzada / TMF, y opcional idioma)
 - [ ] Publicar en Netlify y probar en celular
 - [ ] Conectar el dominio ladrones.mx a Netlify (las redirecciones ya están en `_redirects`)
