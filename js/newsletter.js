@@ -5,6 +5,16 @@
   // URL de la aplicación web de Apps Script (la misma en Alzada, Ladrones y Tattoo Music Fest).
   const FORMULARIOS_URL = "https://script.google.com/macros/s/AKfycbw3XUBhCSspVCCI3nQIg-GEtVpGP2ZChQPaZpUB65EthL0vXAobaTE8q3tlmMF5dasO/exec";
 
+  // Manda los datos al Apps Script sin esperar su respuesta (Google tarda varios segundos y,
+  // desde otro sitio, la respuesta ni siquiera se puede leer). sendBeacon deja el envío en cola
+  // del navegador y regresa al instante; si no existe, se usa fetch con un tope de 6 segundos.
+  function mandar(url, datos) {
+    if (!url.startsWith("https://")) return Promise.reject(new Error("Falta la URL del Apps Script"));
+    if (navigator.sendBeacon && navigator.sendBeacon(url, datos)) return Promise.resolve();
+    const envio = fetch(url, { method: "POST", mode: "no-cors", body: datos, keepalive: true });
+    return Promise.race([envio, new Promise((listo) => setTimeout(listo, 6000))]);
+  }
+
   const EN = document.documentElement.lang === "en";
   const T = EN
     ? {
@@ -27,11 +37,8 @@
         baja: "Listo. Ya no te mandaremos correos.",
         error: "Algo salió mal. Inténtalo de nuevo.",
       };
-
-  // Apps Script no deja leer su respuesta desde otro sitio ("no-cors"); si no hay error de red, llegó.
   async function enviar(datos) {
-    if (!FORMULARIOS_URL.startsWith("https://")) throw new Error("Falta FORMULARIOS_URL");
-    await fetch(FORMULARIOS_URL, { method: "POST", mode: "no-cors", body: datos });
+    await mandar(FORMULARIOS_URL, datos);
   }
 
   function preparar(form, armar, textoListo) {
