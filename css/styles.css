@@ -1179,3 +1179,8 @@ label {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
+
+/* Íconos de redes en una sola línea en celular */
+@media (max-width: 480px) {
+  .redes { gap: 0.5rem 0.25rem; }
+}
