@@ -14,5 +14,16 @@ https://ladrones.mx/*  https://www.ladrones.mx/:splat  301!
 /en/lanzamientos  /en/music/      301
 /en/contacto      /en/contact/    301
 
+# Más páginas viejas de Wix
+/home                /          301
+/about               /bio/      301
+/en/home             /en/       301
+/en/about            /en/bio/   301
+/en/musica           /en/music/ 301
+/en/event-details/*  /en/tour/  301
+/en/profile/*        /en/       301
+/en/members/*        /en/       301
+/en/blank*           /en/       301
+
 # Página de error en inglés
 /en/*  /en/404.html  404
